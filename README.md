@@ -135,26 +135,27 @@ cv2.destroyAllWindows()
       
 ### iii)Draw a rectangle around a specific region of interest in the image.
 ```Python
-
 import cv2
 img = cv2.imread('loki.jpg')
-img1=cv2.resize(img,(600,800))
-start=(0,0)
-stop=(409,529)
-color=(100,255,100)
-thickness=10
-res_img=cv2.rectangle(img1,start,stop,color,thickness)
-
+img1 = cv2.resize(img, (600, 800))
+height, width, _ = img1.shape
+start = (0, 0)
+stop = (width - 1, height - 1)
+color = (100, 255, 100)
+thickness = 10
+res_img = cv2.rectangle(img1, start, stop, color, thickness)
 cv2.imshow('Image Window', res_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
 ```
  <br>
  <br>
 
 ### OUTPUT:
 
-![image](https://github.com/user-attachments/assets/ea326960-52b7-48a4-be16-6d38042930e6)
+![image](https://github.com/user-attachments/assets/5023ba13-0a2f-47e8-8f7b-3ead4175bea0)
+
 
 
 
